@@ -6,7 +6,7 @@ echo bwAdm::createHtmlSubMenu(0);
 $id = bwRequest::getVar('id', 0, 'get');
 $i = bwComponent::openById('BannerSlide', $id);
 
-$form = new bwForm($i);
+$form = new bwForm($i, bwRouter::_('/banners/task'));
 $form->addH2('Dados do slide');
 $form->addInputID();
 $form->addSelectDB('id_banner', 'Banner');

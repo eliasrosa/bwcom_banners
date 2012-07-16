@@ -3,7 +3,7 @@
 defined('BW') or die("Acesso negado!");
 
 echo bwAdm::createHtmlSubMenu(1);
-echo bwButton::redirect('Criar novo banner', 'adm.php?com=banners&view=cadastro');
+echo bwButton::redirect('Criar novo banner', '/banners/cadastro/0');
 
 class bwGridBannersLista extends bwGrid
 {
@@ -25,7 +25,7 @@ class bwGridBannersLista extends bwGrid
 
     function col0($i)
     {
-        return sprintf('<a href="%s">%s</a>', $i->getUrl('/adm/banners/cadastro'), $i->id);
+        return sprintf('<a href="%s">%s</a>', $i->getUrl('/banners/cadastro'), $i->id);
     }
 
     function col1($i)

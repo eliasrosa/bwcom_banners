@@ -6,7 +6,7 @@ echo bwAdm::createHtmlSubMenu(1);
 $id = bwRequest::getVar('id', 0, 'get');
 $i = bwComponent::openById('Banner', $id);
 
-$form = new bwForm($i);
+$form = new bwForm($i, bwRouter::_('/banners/task'));
 $form->addH2('Dados do banner');
 $form->addInputID();
 $form->addInput('nome');
