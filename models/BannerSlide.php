@@ -99,7 +99,7 @@ class BannerSlide extends bwRecord
             'foreign' => 'id'
         ));
 
-        $this->setBwImagem('banners', 'slides');
+        $this->addImagem();
     }
 
     public function salvar($dados)
