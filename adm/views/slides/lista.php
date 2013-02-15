@@ -19,8 +19,7 @@ class bwGridBannersSlidesLista extends bwGrid
         $this->addCol('ID', 's.id', 'tac', 30);
         $this->addCol('Título', 's.titulo');
         $this->addCol('Descrição', 's.descricao', NULL, 350);
-        $this->addCol('Link', 's.link', NULL, 350);
-        $this->addCol('Banner', 'b.banner', 'tac', 200);
+        $this->addCol('Banner', 'b.nome', 'tac', 200);
         $this->addCol('Status', 's.status', 'tac', 30);
 
         $this->show();
@@ -43,16 +42,10 @@ class bwGridBannersSlidesLista extends bwGrid
 
     function col3($i)
     {
-        $t = $i->link_target == '' ? '' : "({$i->link})";
-        return $i->link . $t;
-    }
-
-    function col4($i)
-    {
         return $i->Banner->nome;
     }
 
-    function col5($i)
+    function col4($i)
     {
         return bwAdm::getImgStatus($i->status);
     }
